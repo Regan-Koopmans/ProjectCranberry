@@ -55,7 +55,7 @@ public class Teams {
 		solve(index+1);
 		int right =getDiffTeamStrength();
 
-		if (left < right && (team1SizeLeft == team2SizeLeft || Math.abs(team1SizeLeft -team2SizeLeft) == 1))
+		if (left < right && (team1SizeLeft == team2SizeLeft || Math.abs(team1SizeLeft - team2SizeLeft) == 1))
 		{
 			myTeam[index] = true;
 			solve(index+1);
