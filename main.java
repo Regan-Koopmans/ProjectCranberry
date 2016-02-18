@@ -26,7 +26,7 @@ public class main {
             task22.print();
 
 			
-			int [] a3 = {3,2,4,3,4,6,7};
+			int [] a3 = {3,4,5,-3,100,1,89,54,23,20};
 			Teams task23 = new Teams(a3);
 			task23.solve(0);
 			task23.print();

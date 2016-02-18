@@ -22,10 +22,9 @@ public class Teams {
     }
     
     public void solve(int index)
-    {
-		
+    {	
 		updateLists();
-
+		
 		if (myTeam.length == 1) 
 		{
 			minDiff = members[index];
@@ -47,13 +46,16 @@ public class Teams {
 			minDiff	= getDiffTeamStrength();
 
 		myTeam[index] = true;
-		solve(index+1);	
+		solve(index+1);
+		updateLists();
+		int team1SizeLeft = team1.size();
+		int team2SizeLeft = team2.size();	
 		int left = getDiffTeamStrength();
 		myTeam[index] = false;
 		solve(index+1);
 		int right =getDiffTeamStrength();
 
-		if (left <= right)
+		if (left < right && (team1SizeLeft == team2SizeLeft || Math.abs(team1SizeLeft -team2SizeLeft) == 1))
 		{
 			myTeam[index] = true;
 			solve(index+1);
